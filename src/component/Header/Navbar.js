@@ -4,10 +4,11 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import {signOut} from '../../redux/auth/auth.action'
 import './Navbar.scss'
+import Searchs from '../Other/Searchs';
 
 const { Header } = Layout;
 
-
+const logo = "https://raw.githubusercontent.com/sunnyprime/LOGO/master/kishaanHeet/kissanheetT.png"
 
 function Navbar(props) {
   const { auth } = props;
@@ -16,16 +17,11 @@ function Navbar(props) {
     return (
       <Fragment >
 <Header className="container">
-      <div style={{color:'white'}}>LOGO</div>
-      <Menu theme="dark" mode="horizontal">
-        
-        <Menu.Item><NavLink to="/">Home</NavLink></Menu.Item>
-        <Menu.Item><NavLink to="/upload">upload</NavLink></Menu.Item>
-        <Menu.Item><NavLink to="/videos">Videos</NavLink></Menu.Item>
-        <Menu.Item><NavLink to="/">Home</NavLink></Menu.Item>
-
-       
-      </Menu>
+      <div className="logo"><img src={logo} height='56px' /></div>
+<div className="search"> 
+  <Searchs />
+</div>
+<div></div>
       
       {auth.isEmpty ? <React.Fragment>
         <Menu theme="dark" mode="horizontal">
