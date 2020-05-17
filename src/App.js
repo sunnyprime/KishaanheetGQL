@@ -22,10 +22,12 @@ function App() {
   return (
   
   <div>
+    <Layout>
     <Navbar></Navbar>
+    </Layout>
     <Alerts key="1"/>
     
-      <Content style={{ padding: '0 50px',height:'700px' }}>
+      <Content style={{ padding:'100px 100px',height:'80vh' }}>
     <Switch>
     <Route exact path='/' component={Home} />
     <Route exact path='/categoryupload' component={CategoryUpload} />
@@ -38,9 +40,10 @@ function App() {
     
 
     </Switch>
-    {/* <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer> */}
-    <Footers />
+    
+   
     </Content>
+    <Footers />
   </div>
     
 

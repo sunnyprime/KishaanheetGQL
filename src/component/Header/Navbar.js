@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import {signOut} from '../../redux/auth/auth.action'
 import './Navbar.scss'
 import Searchs from '../Other/Searchs';
+import { ShoppingCartOutlined } from '@ant-design/icons';
 
 const { Header } = Layout;
 
@@ -29,7 +30,9 @@ function Navbar(props) {
       <Menu.Item><NavLink to="/signup">Signup</NavLink></Menu.Item></Menu></React.Fragment>: (
          <Menu theme="dark" mode="horizontal">
         <Menu.Item><NavLink to="/" onClick={props.signOut}>Logout</NavLink></Menu.Item>
+        <Menu.Item><NavLink to="/" onClick={props.signOut}><ShoppingCartOutlined /></NavLink></Menu.Item>
         </Menu>
+
         )
       }
         
@@ -46,7 +49,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
+  console.log(state); 
   return{
     auth: state.firebase.auth
   }
