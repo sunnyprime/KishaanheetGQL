@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Form, Input, Button, Checkbox } from 'antd';
 import './Login.scss';
 import { signIn } from '../../redux/auth/auth.action'
+import { Row, Col } from 'antd';
 
 const layout = {
     labelCol: {
@@ -32,8 +33,10 @@ function Login(props) {
       };
     
     return (
-        <div style={{padding:'20vh 20vw 8vh 10vw',marginRight:'100px'}}>
-          <h3 style={{textAlign:'center'}}>Login</h3>
+        <div>
+          <Row>
+      <Col span={2}></Col>
+      <Col span={16}> <h3>Login</h3>
           <br />
             <Form
       {...layout}
@@ -80,7 +83,10 @@ function Login(props) {
           Submit
         </Button>
       </Form.Item>
-    </Form>
+    </Form></Col>
+      <Col span={3}></Col>
+    </Row>
+         
         </div>
     )
 }

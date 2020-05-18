@@ -18,7 +18,7 @@ function Navbar(props) {
     return (
       <Fragment >
 <Header className="container">
-      <div className="logo"><img src={logo} height='56px' /></div>
+      <div className="logo"><img src={logo} height='56px' alt="logo"/></div>
 <div className="search"> 
   <Searchs />
 </div>

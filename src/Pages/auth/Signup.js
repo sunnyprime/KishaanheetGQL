@@ -32,8 +32,8 @@ function Signup(props) {
       };
     
     return (
-        <div style={{padding:'20vh 20vw 8vh 10vw',marginRight:'100px'}}>
-          <h3 style={{textAlign:'center'}}>SIGNUP</h3>
+        <div>
+          <h3>SIGNUP</h3>
           <br />
             <Form
       {...layout}

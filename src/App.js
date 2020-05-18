@@ -27,7 +27,7 @@ function App() {
     </Layout>
     <Alerts key="1"/>
     
-      <Content style={{ padding:'100px 100px',height:'80vh' }}>
+      <Content>
     <Switch>
     <Route exact path='/' component={Home} />
     <Route exact path='/categoryupload' component={CategoryUpload} />
