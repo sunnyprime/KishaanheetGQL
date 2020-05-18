@@ -37,6 +37,7 @@ class CategoryUpload extends Component {
     render() {
         return (
             <div>
+              <h1>CategoryUpload</h1>
                  <Form {...layout} ref={this.formRef} name="control-ref" onFinish={this.onFinish}>
         <Form.Item
           name="Name"
@@ -45,8 +46,7 @@ class CategoryUpload extends Component {
             {
               required: true,
             },
-       
-            
+
           ]}
         >
           <Input />
@@ -65,8 +65,6 @@ class CategoryUpload extends Component {
         >
           <Input />
         </Form.Item>
-      
-       
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Submit

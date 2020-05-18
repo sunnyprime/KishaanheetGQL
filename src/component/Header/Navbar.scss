@@ -5,6 +5,9 @@
     flex-wrap: nowrap;              /* default value; can be omitted */
     justify-content: space-between; /* switched from default (flex-start, see below) */
     // background-color: lightyellow;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: wheat;
   }
   .container > Menu {
     width: 100px;
@@ -27,9 +30,9 @@
 //     font-family: 'Alfa Slab One';font-size: 22px!important;
 //   }
 
-*{
-  font-family: 'Acme';font-size: 22px;
-}
+// *{
+//   font-family: 'Acme';font-size: 22px;
+// }
 .search{
   color: green;
   // background: green;
