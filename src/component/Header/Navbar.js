@@ -11,7 +11,7 @@ import {ShoppingCartOutlined} from '@ant-design/icons';
 
 const {Header} = Layout;
 
-const logo = 'https://raw.githubusercontent.com/sunnyprime/LOGO/master/kishaanHeet/kissanheetT.png';
+const logo = 'https://raw.githubusercontent.com/sunnyprime/LOGO/master/kishaanHeet/kissankart.png';
 
 function Navbar(props) {
   const {auth} = props;
@@ -20,7 +20,9 @@ function Navbar(props) {
   return (
     <Fragment >
       <Header className="container">
-        <div className="logo"><img src={logo} height='56px' alt="logo"/></div>
+        <div className="logo"><NavLink to="/">
+          <img src={logo} height='56px' alt="logo"/>
+        </NavLink></div>
         <div className="search">
           <Searchs />
         </div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import './Home.scss';
@@ -9,11 +10,16 @@ import Sample from '../auth/Sample';
 // import { Redirect } from 'react-router-dom'
 
 // This is @home screen
-function Home() {
+function Home(props) {
+  // console.log(',,,,');
+  // const {category} = props;
+  // console.log(category);
+
   return (
     <div>
-      <Cards />
+
       <Sample />
+      <Cards category={props.category} />
     </div>
   );
 }
