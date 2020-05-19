@@ -24,7 +24,7 @@ function Navbar(props) {
         <div className="search">
           <Searchs />
         </div>
-        <div></div>
+        <div className="search"></div>
 
         {auth.isEmpty ? <React.Fragment>
           <Menu theme="dark" mode="horizontal">

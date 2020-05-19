@@ -1,7 +1,12 @@
 body {
   font-family: 'Alfa Slab One';font-size: 22px!important;
 }
-.containers {
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+/* .containers {
   display: -webkit-flexbox;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -12,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-}
+} */
 
 /* footer {
   clear: both;
@@ -21,9 +26,19 @@ body {
   margin-top: -200px;
 } */
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
+.content{
+  min-height: 75vh;
+  /* border: 1px solid red; */
+  padding: 10px;
 }
+footer {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+  /* border: 1px solid yellow; */
+
+}
+
+
+

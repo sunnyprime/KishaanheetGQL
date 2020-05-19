@@ -1,9 +1,42 @@
 h3 {
-    color:red;
+    color:#7cb305;
+    text-align: center;
 }
 .authbox {
     border: 1px solid green;
     border-radius: 25px;
     padding: 50px;
-    margin: 80px;
+    background-color: #b5f5ec;
+    // margin: 8%;
+    font-weight: bold;
 }
+.authbutton {
+    background-color: #7cb305;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 80px 30px 80px; 
+    font-weight: bold;
+    // margin-left: 10vw;
+}
+hr{
+    color: green;
+}
+.tailLayout {
+    margin-left: auto;
+    margin-left: 10vw;
+}
+// ================
+
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 450px;
+    
+    line-height: 160px;
+    background: #364d79;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }

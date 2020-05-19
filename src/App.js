@@ -15,28 +15,32 @@ import PrivateRoute from './utils/PrivateRoute';
 import CategoryUpload from './Pages/Upload/CategoryUpload';
 import Productup from './Pages/Upload/Productup';
 import Footers from './Pages/Footer/Footers';
+import sample from './Pages/auth/sample';
 const {Content} = Layout;
 
 
 function App() {
   return (
 
-    <div>
+    <div className="whole">
       <Layout>
         <Navbar></Navbar>
+
+        <Alerts key="1"/>
+        <Content className="content">
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/categoryupload' component={CategoryUpload} />
+            <Route exact path='/productupload' component={Productup} />
+            <PrivateRoute exact path='/Videos' component={Videos} />
+            <Route exact path='/Login' component={Login} />
+            <Route exact path='/signup' component={Signup} />
+            <Route exact path='/sample' component={sample} />
+
+          </Switch>
+        </Content>
+        <Footers />
       </Layout>
-      <Alerts key="1"/>
-      <Content>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/categoryupload' component={CategoryUpload} />
-          <Route exact path='/productupload' component={Productup} />
-          <PrivateRoute exact path='/Videos' component={Videos} />
-          <Route exact path='/Login' component={Login} />
-          <Route exact path='/signup' component={Signup} />
-        </Switch>
-      </Content>
-      <Footers />
     </div>
 
 

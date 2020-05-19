@@ -9,18 +9,18 @@ import {Row, Col} from 'antd';
 
 const layout = {
   labelCol: {
-    span: 8,
+    span: 5,
   },
   wrapperCol: {
     span: 16,
   },
 };
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
+// const tailLayout = {
+//   wrapperCol: {
+//     offset: 8,
+//     span: 16,
+//   },
+// };
 
 function Login(props) {
   console.log(props);
@@ -37,9 +37,10 @@ function Login(props) {
   return (
     <div>
       <Row>
-        <Col span={2}></Col>
-        <Col span={16} className="authbox"> <h3>Login</h3>
-          <br />
+        <Col span={3} lg={5} xs={0}></Col>
+        <Col span={12} lg={12} xs={24}className="authbox"> <h3>LOGIN</h3>
+          <hr />
+          <br/>
           <Form
             {...layout}
             name="basic"
@@ -75,18 +76,19 @@ function Login(props) {
             >
               <Input.Password />
             </Form.Item>
+            <div className="tailLayout">
+              <Form.Item name="remember" valuePropName="checked">
+                <Checkbox>Remember me</Checkbox>
+              </Form.Item>
 
-            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item>
-
-            <Form.Item {...tailLayout}>
-              <Button type="primary" htmlType="submit">
-          Submit
-              </Button>
-            </Form.Item>
+              <Form.Item>
+                <Button className="authbutton" type="primary" htmlType="submit">
+          Login
+                </Button>
+              </Form.Item>
+            </div>
           </Form></Col>
-        <Col span={3}></Col>
+        <Col span={2}></Col>
       </Row>
 
     </div>
