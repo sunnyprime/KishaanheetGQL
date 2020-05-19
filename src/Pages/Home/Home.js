@@ -17,9 +17,9 @@ function Home(props) {
 
   return (
     <div>
-
+      <Cards category={props.category} style={{margin: '100px 0px'}}/>
       <Sample />
-      <Cards category={props.category} />
+
     </div>
   );
 }

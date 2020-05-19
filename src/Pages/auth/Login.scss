@@ -18,8 +18,20 @@ h3 {
     border-radius: 25px;
     padding: 10px 80px 30px 80px; 
     font-weight: bold;
-    // margin-left: 10vw;
+    // margin-left: 10vw;   
 }
+
+.authbutton:hover {
+    background-color: #304600;
+    ::after{
+        background-color: green;
+    }
+}
+.authbutton:hover::after {
+    background-color: green ;
+}
+
+
 hr{
     color: green;
 }
@@ -35,7 +47,7 @@ hr{
     height: 450px;
     
     line-height: 160px;
-    background: #364d79;
+    background: #1cd603;
     overflow: hidden;
   }
   

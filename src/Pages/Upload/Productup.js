@@ -88,7 +88,7 @@ class Productup extends Component {
 
 
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" Success>
             Submit
           </Button>&nbsp;&nbsp;
           <Button htmlType="button" onClick={this.onReset}>

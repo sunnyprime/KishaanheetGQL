@@ -61,7 +61,7 @@ function Login(props) {
                 },
               ]}
             >
-              <Input />
+              <Input placeholder="Enter your Email" />
             </Form.Item>
 
             <Form.Item
@@ -74,7 +74,7 @@ function Login(props) {
                 },
               ]}
             >
-              <Input.Password />
+              <Input.Password placeholder="Enter your Password" />
             </Form.Item>
             <div className="tailLayout">
               <Form.Item name="remember" valuePropName="checked">

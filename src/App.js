@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import 'antd/dist/antd.css';
-import './App.css';
+import './App.scss';
 import {Switch, Route} from 'react-router-dom';
 import Navbar from './component/Header/Navbar';
 import Home from './Pages/Home/Home';
