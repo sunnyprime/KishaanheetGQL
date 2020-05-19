@@ -1,8 +1,9 @@
+/* eslint-disable require-jsdoc */
 import React from 'react';
 import {Carousel} from 'antd';
 import './Login.scss';
 
-export default function sample() {
+export default function Sample() {
   return (
     <div style={{border: '1px solid black'}}>
       <Carousel autoplay>

@@ -5,6 +5,7 @@ import Cards from './Cards';
 import {connect} from 'react-redux';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
+import Sample from '../auth/Sample';
 // import { Redirect } from 'react-router-dom'
 
 // This is @home screen
@@ -12,6 +13,7 @@ function Home() {
   return (
     <div>
       <Cards />
+      <Sample />
     </div>
   );
 }

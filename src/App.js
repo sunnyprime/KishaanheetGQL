@@ -15,7 +15,7 @@ import PrivateRoute from './utils/PrivateRoute';
 import CategoryUpload from './Pages/Upload/CategoryUpload';
 import Productup from './Pages/Upload/Productup';
 import Footers from './Pages/Footer/Footers';
-import sample from './Pages/auth/sample';
+import Sample from './Pages/auth/Sample';
 const {Content} = Layout;
 
 
@@ -35,7 +35,7 @@ function App() {
             <PrivateRoute exact path='/Videos' component={Videos} />
             <Route exact path='/Login' component={Login} />
             <Route exact path='/signup' component={Signup} />
-            <Route exact path='/sample' component={sample} />
+            <Route exact path='/sample' component={Sample} />
 
           </Switch>
         </Content>
