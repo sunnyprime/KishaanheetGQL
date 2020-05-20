@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { Form, Input, Button, Select } from 'antd';
+import { InputNumber,Form, Input, Button, Select,Switch } from 'antd';
 import { Spin } from 'antd';
+// import { Form, Input, InputNumber, Button } from 'antd';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import {addproduct} from '../../redux/category/category.action'
 
 const { Option } = Select;
 const layout = {
@@ -33,6 +35,7 @@ class Productup extends Component {
 
   onFinish = values => {
     console.log(values);
+    this.props.addproduct(values)
   };
 
   onReset = () => {
@@ -61,7 +64,7 @@ class Productup extends Component {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Enter the product name"/>
         </Form.Item>
         <Form.Item
           name="category"
@@ -85,10 +88,58 @@ class Productup extends Component {
 
           </Select>
         </Form.Item>
+        <Form.Item name="price" label="Price" rules={[{ type: 'number',required: true, }]}>
+        <InputNumber />
+      </Form.Item>
+      <Form.Item name="quantity" label="Quantity Available" rules={[{ type: 'number',required: true, }]}>
+        <InputNumber />
+      </Form.Item>
+      
+      <Form.Item
+        name="discount"
+        label="Discount in %"
+        rules={[
+          {
+            required: true,
+            type: 'number',
+            min: 0,
+            max: 100,
+          },
+        ]}
+      >
+        <InputNumber />
+      </Form.Item>
+      <Form.Item name="offer" label="Offer" valuePropName="checked">
+        <Switch />
+      </Form.Item>
 
-
+        <Form.Item
+          name="brand"
+          label="Brand Name"
+          rules={[
+            {
+              required: true,
+            },
+          ]}
+        >
+          <Input placeholder="Enter the Brand name"/>
+        </Form.Item>
+        <Form.Item
+          name="url"
+          label="Image Url"
+          rules={[
+            {
+              required: true,
+              type:"url"
+              
+            },
+           
+          ]}
+        >
+          <Input />
+        </Form.Item>
         <Form.Item {...tailLayout}>
-          <Button type="primary" htmlType="submit" Success>
+          <Button type="primary" htmlType="submit">
             Submit
           </Button>&nbsp;&nbsp;
           <Button htmlType="button" onClick={this.onReset}>
@@ -105,19 +156,19 @@ class Productup extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  // console.log(".....");
-  
-  // console.log(state);
-  
+const DispatchToProps = (dispatch) => {
   return {
-  //   projects: state.firestore.ordered.projects,
-  //   auth: state.firebase.auth,
+    addproduct:(data) => dispatch(addproduct(data))
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
   category: state.firestore.ordered.category,
   }
 }
 export default compose(
-  connect(mapStateToProps),
+  connect(mapStateToProps,DispatchToProps),
   firestoreConnect([{
     collection: 'category'
   }])

@@ -15,7 +15,7 @@ const logo = 'https://raw.githubusercontent.com/sunnyprime/LOGO/master/kishaanHe
 
 function Navbar(props) {
   const {auth} = props;
-  console.log(auth);
+  // console.log(auth);
 
   return (
     <Fragment >
@@ -26,10 +26,14 @@ function Navbar(props) {
         <div className="search">
           <Searchs />
         </div>
-        <div className="search"></div>
+        <div className="search">
+          {/* <Menu.Item><NavLink to="/filter">Product</NavLink></Menu.Item> */}
+          {/* <Menu.Item><NavLink to="/login">Login</NavLink></Menu.Item> */}
+        </div>
 
         {auth.isEmpty ? <React.Fragment>
           <Menu theme="dark" mode="horizontal">
+            <Menu.Item><NavLink to="/products">Product</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/login">Login</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/signup">Signup</NavLink></Menu.Item>
           </Menu></React.Fragment>: (
@@ -56,7 +60,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     auth: state.firebase.auth,
   };

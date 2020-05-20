@@ -6,7 +6,7 @@ import {Card} from 'antd';
 const {Meta} = Card;
 
 export default function Singlecard(props) {
-  console.log(props);
+  // console.log(props);
 
   const {src, name} = props;
   return (
