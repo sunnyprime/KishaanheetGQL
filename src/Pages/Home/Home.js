@@ -11,10 +11,6 @@ import Sample from '../auth/Sample';
 
 // This is @home screen
 function Home(props) {
-  // console.log(',,,,');
-  // const {category} = props;
-  // console.log(category);
-
   return (
     <div>
       <Cards category={props.category} style={{margin: '100px 0px'}}/>
@@ -26,10 +22,6 @@ function Home(props) {
 
 
 const mapStateToProps = (state) => {
-  // console.log(".....");
-
-  // console.log(state);
-
   return {
     category: state.firestore.ordered.category,
     //   auth: state.firebase.auth,

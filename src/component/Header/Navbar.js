@@ -27,13 +27,12 @@ function Navbar(props) {
           <Searchs />
         </div>
         <div className="search">
-          {/* <Menu.Item><NavLink to="/filter">Product</NavLink></Menu.Item> */}
-          {/* <Menu.Item><NavLink to="/login">Login</NavLink></Menu.Item> */}
         </div>
 
         {auth.isEmpty ? <React.Fragment>
           <Menu theme="dark" mode="horizontal">
             <Menu.Item><NavLink to="/products">Product</NavLink></Menu.Item>
+            <Menu.Item><NavLink to="/productupload">Upload</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/login">Login</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/signup">Signup</NavLink></Menu.Item>
           </Menu></React.Fragment>: (

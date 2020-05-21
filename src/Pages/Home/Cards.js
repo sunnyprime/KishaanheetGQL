@@ -1,4 +1,4 @@
-/* eslint-disable require-jsdoc */
+
 import React from 'react';
 import Singlecard from '../../component/Home/Singlecard';
 import {Row, Col} from 'antd';
@@ -8,7 +8,7 @@ export default function Cards({category}) {
   if (category) {
     return (
       <div>
-        <Row justify="space-between">
+        <Row justify="space-around">
 
 
           {category.map((item, index)=>{

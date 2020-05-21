@@ -29,6 +29,7 @@ function App() {
       <Layout>
         <Navbar></Navbar>
 
+
         <Alerts key="1"/>
         <Content className="content">
           <Switch>
@@ -39,7 +40,7 @@ function App() {
             <Route exact path='/Login' component={Login} />
             <Route exact path='/signup' component={Signup} />
             {/* <Route exact path='/sample' component={Sample} /> */}
-            <Route exact path='/product:id' component={Products} />
+            <Route path='/products' component={Products} />
             <Route path="*"><Error /></Route>
 
           </Switch>
