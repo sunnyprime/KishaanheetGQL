@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Menu, Button } from 'antd';
+import React, {Component} from 'react';
+import {Menu, Button} from 'antd';
 import {
   AppstoreOutlined,
   MenuUnfoldOutlined,
@@ -10,22 +10,22 @@ import {
   MailOutlined,
 } from '@ant-design/icons';
 
-const { SubMenu } = Menu;
+const {SubMenu} = Menu;
 
 export default class Menus extends Component {
     state = {
-        collapsed: false,
-      };
-    
+      collapsed: false,
+    };
+
       toggleCollapsed = () => {
         this.setState({
           collapsed: !this.state.collapsed,
         });
       };
-    render() {
+      render() {
         return (
-            <div style={{ width: 256 }}>
-            <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
+          <div style={{width: 256}}>
+            <Button type="primary" onClick={this.toggleCollapsed} style={{marginBottom: 16}}>
               {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
             </Button>
             <Menu
@@ -34,7 +34,7 @@ export default class Menus extends Component {
               mode="inline"
               theme="dark"
               inlineCollapsed={this.state.collapsed}
-              style={{backgroundColor:'blue'}}
+              style={{backgroundColor: 'blue'}}
             >
               <Menu.Item key="1" icon={<PieChartOutlined />}>
                 Option 1
@@ -61,6 +61,6 @@ export default class Menus extends Component {
               </SubMenu>
             </Menu>
           </div>
-        )
-    }
+        );
+      }
 }

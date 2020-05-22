@@ -9,14 +9,14 @@ export default function Videos() {
   return (
     <div>
       <>
-        <Divider orientation="left" style={{color: '#333', fontWeight: 'normal'}}>
+        <Divider orientation="right" style={{fontAlign: 'center', color: '#333', fontWeight: 'normal'}}>
       Horizontal
         </Divider>
-        <Row gutter={16}>
-          <Col className="gutter-row" span={6}>
+        <Row gutter={16} orientation="right">
+          <Col orientation="right" className="gutter-row" span={6}>
             <div style={style}>col-6</div>
           </Col>
-          <Col className="gutter-row" span={6}>
+          <Col className="gutter-rows" span={6}>
             <div style={style}>col-6</div>
           </Col>
           <Col className="gutter-row" span={6}>

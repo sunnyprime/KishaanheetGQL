@@ -8,7 +8,7 @@ export default function Cards({category}) {
   if (category) {
     return (
       <div>
-        <Row justify="space-around">
+        <Row justify="space-around" style={{alignContent: 'center'}}>
 
 
           {category.map((item, index)=>{

@@ -13,7 +13,7 @@ import Sample from '../auth/Sample';
 function Home(props) {
   return (
     <div>
-      <Cards category={props.category} style={{margin: '100px 0px'}}/>
+      <Cards category={props.category} style={{}}/>
       <Sample />
 
     </div>

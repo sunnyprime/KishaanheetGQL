@@ -6,7 +6,7 @@ import {Switch, Route} from 'react-router-dom';
 import Navbar from './component/Header/Navbar';
 import Home from './Pages/Home/Home';
 // import Upload from './Pages/Upload/Upload'
-// import Videos from './Pages/Videos/Videos';
+import Videos from './Pages/Videos/Videos';
 import Login from './Pages/auth/Login';
 import Signup from './Pages/auth/Signup';
 import {Layout} from 'antd';
@@ -36,7 +36,7 @@ function App() {
             <Route exact path='/' component={Home} />
             <Route exact path='/categoryupload' component={CategoryUpload} />
             <Route exact path='/productupload' component={Productup} />
-            {/* <PrivateRoute exact path='/Videos' component={Videos} /> */}
+            <Route exact path='/Videos' component={Videos} />
             <Route exact path='/Login' component={Login} />
             <Route exact path='/signup' component={Signup} />
             {/* <Route exact path='/sample' component={Sample} /> */}

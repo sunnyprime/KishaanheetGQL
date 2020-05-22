@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
 import {Spin} from 'antd';
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import ProductsDetail from './ProductsDetail';
 import {Route} from 'react-router-dom';
 // const {SubMenu} = Menu;
@@ -27,18 +27,21 @@ class Products extends Component {
         if (category) {
           return (
             <div>
-              <Menu onClick={this.handleClick} selectedKeys={[this.state.current]}
+              {/* Top navbar */}
+              <Menu style={{textAlign: 'center'}}
+                onClick={this.handleClick} selectedKeys={[this.state.current]}
                 mode="horizontal">
-                <Menu.Item><Link exact to="/products/all">
-            All</Link>
+                <Menu.Item><NavLink exact to="/products/all">
+                    All</NavLink>
                 </Menu.Item>
                 {category.map((item, index)=>{
-                  return (<Menu.Item key={index}><NavLink to={`/products/${item.Name}`}>
+                  return (<Menu.Item style={{margin: '0px 3vw'}} key={index}><NavLink to={`/products/${item.Name}`}>
                     {item.Name}</NavLink>
                   </Menu.Item>);
                 })}
 
               </Menu>
+              <br />
               <Route path='/products/:id' component={ProductsDetail} />
 
             </div>
