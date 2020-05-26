@@ -3,7 +3,6 @@
 /* eslint-disable require-jsdoc */
 import React from 'react';
 import {Card} from 'antd';
-import {Button, Radio} from 'antd';
 const {Meta} = Card;
 
 

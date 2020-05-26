@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from 'antd';
 import {Typography} from 'antd';
-import {Button, Radio} from 'antd';
+import {Button} from 'antd';
 const {Text} = Typography;
 
 const {Meta} = Card;
@@ -10,6 +10,8 @@ export default function ProductCard(props) {
 //   console.log(props);
   const {name, image, price, offer, discount} = props;
   const oldprice = (price*100/(100-discount)).toFixed(0);
+  console.log(offer);
+
 
   return (
     <div>

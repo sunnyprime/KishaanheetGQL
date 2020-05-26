@@ -9,6 +9,7 @@ import {Row, Col} from 'antd';
 import ProductMenu from './ProductMenu';
 import ProductCard from '../../component/Product/ProductCard';
 import {bycategory} from './ProductUtil';
+import {Link} from 'react-router-dom';
 
 // const {id} =useParams();
 function ProductsDetail(props) {
@@ -50,9 +51,9 @@ function ProductsDetail(props) {
             <Row justify="space-around">
               {filteredctg.map((item, index)=>{
                 return (<Col key={index} span={4} lg={4} md={8} sm={12} xs={24}
-                >
-                  <ProductCard image={item.url} name={item.Name} price={item.price}
-                    discount={item.discount} offer={item.offer}/>
+                ><Link to={`/productdetails/${item.id}`}>
+                    <ProductCard image={item.url} name={item.Name} price={item.price}
+                      discount={item.discount} offer={item.offer}/></Link>
                 </Col>);
               })}
 

@@ -26,11 +26,6 @@ const tailLayout = {
 class Productup extends Component {
     formRef = React.createRef();
 
-  onGenderChange = (value) => {
-    this.formRef.current.setFieldsValue({
-      note: `Hi, ${value === 'male' ? 'man' : 'lady'}!`,
-    });
-  };
 
   onFinish = (values) => {
     console.log(values);
@@ -41,12 +36,7 @@ class Productup extends Component {
     this.formRef.current.resetFields();
   };
 
-  onFill = () => {
-    this.formRef.current.setFieldsValue({
-      note: 'Hello world!',
-      gender: 'male',
-    });
-  };
+
   render() {
     const {category} =this.props;
     // console.log(category);
@@ -90,8 +80,11 @@ class Productup extends Component {
             <Form.Item name="price" label="Price" rules={[{type: 'number', required: true}]}>
               <InputNumber />
             </Form.Item>
-            <Form.Item name="quantity" label="Quantity Available" rules={[{type: 'number', required: true}]}>
+            <Form.Item name="Amount" label="amount" rules={[{type: 'number', required: true}]}>
               <InputNumber />
+            </Form.Item>
+            <Form.Item name="quantity" label="Quantity" rules={[{type: 'string'}]}>
+              <Input placeholder="Enter Weight or Liter with KG or L" />
             </Form.Item>
 
             <Form.Item

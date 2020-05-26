@@ -2,13 +2,9 @@ import React from 'react';
 import {Menu} from 'antd';
 import {Slider} from 'antd';
 import {Typography} from 'antd';
-import {Switch} from 'antd';
 import {Checkbox} from 'antd';
 
-
 const {Text} = Typography;
-const {SubMenu} = Menu;
-
 
 function handleClick(e) {
   console.log('click', e);
@@ -26,7 +22,7 @@ function ProductMenu() {
   };
   return (
     <div>
-      <Menu onClick={handleClick} style={{width: 400}} mode="vertical" style={{padding: '20px'}}>
+      <Menu onClick={handleClick} style={{width: 400, padding: '20px'}} mode="vertical" >
         <Menu.Item label="price"><Slider label="Price" marks={marks} defaultValue={37} />
 
         </Menu.Item>
