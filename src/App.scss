@@ -23,5 +23,20 @@ footer {
 
 }
 
+.cardbutton{
+  background-color: green;
+  border: none;
+}
 
 
+
+.bordedred{
+  border: 1px solid red;
+}
+
+.cardcenter {
+  // border:1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}

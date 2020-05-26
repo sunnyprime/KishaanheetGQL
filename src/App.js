@@ -18,6 +18,7 @@ import Footers from './Pages/Footer/Footers';
 // import Sample from './Pages/auth/Sample';
 import Products from './Pages/Products/Products';
 import Error from './Pages/Error';
+import Details from './Pages/Detail/Details';
 // import Product from './component/Product/Product';
 const {Content} = Layout;
 
@@ -38,10 +39,12 @@ function App() {
             <Route exact path='/productupload' component={Productup} />
             <Route exact path='/Videos' component={Videos} />
             <Route exact path='/Login' component={Login} />
+            <Route path='/productdetails/:id' component={Details} />
             <Route exact path='/signup' component={Signup} />
             {/* <Route exact path='/sample' component={Sample} /> */}
             <Route path='/products' component={Products} />
             <Route path="*"><Error /></Route>
+            <Details />
 
           </Switch>
         </Content>

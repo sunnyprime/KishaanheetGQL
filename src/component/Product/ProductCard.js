@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card} from 'antd';
 import {Typography} from 'antd';
-
+import {Button, Radio} from 'antd';
 const {Text} = Typography;
 
 const {Meta} = Card;
@@ -22,7 +22,9 @@ export default function ProductCard(props) {
         <Meta title={name} />
         <p><Text type="danger" delete>Rs: {oldprice}</Text> <Text style={{color: 'blue'}} strong type="secondary">Rs: {price}</Text>
         </p>
-        {/* <Button > Add To cart</Button> */}
+        <div>
+          <Button className="cartbutton" type="primary" shape="round"> Add To cart</Button>
+        </div>
       </Card>
     </div>
   );

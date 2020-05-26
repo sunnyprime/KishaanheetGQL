@@ -41,17 +41,13 @@ function ProductsDetail(props) {
       <div>
         <Row>
           <Col span={6} lg={6} md={8} sm={12} xs={24}
-
           >
             <ProductMenu />
           </Col>
           <Col span={18} lg={18} md={16} sm={12} xs={24}
 
           >
-            {/* <ProductMenu /> */}
-            {/* <ProductMenu /> */}
             <Row justify="space-around">
-              {/* <ProductMenu /> */}
               {filteredctg.map((item, index)=>{
                 return (<Col key={index} span={4} lg={4} md={8} sm={12} xs={24}
                 >

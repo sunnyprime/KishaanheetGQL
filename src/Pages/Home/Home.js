@@ -1,20 +1,25 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable require-jsdoc */
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './Home.scss';
 import Cards from './Cards';
 import {connect} from 'react-redux';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
 import Sample from '../auth/Sample';
-// import { Redirect } from 'react-router-dom'
 
-// This is @home screen
+import UseWindowDimension from './UseWindowDimension';
+import Banner from '../../component/Carosoul/Banner';
+import Carosouls from '../../component/Carosoul/Carosouls';
+
 function Home(props) {
+  const {height, width} = UseWindowDimension();
   return (
     <div>
-      <Cards category={props.category} style={{}}/>
-      <Sample />
+      <Cards category={props.category} width={width}/>
+      {/* <Sample /> */}
+      <Banner />
+      {/* <Carosouls /> */}
 
     </div>
   );
