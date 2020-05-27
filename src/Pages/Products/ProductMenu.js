@@ -22,7 +22,7 @@ function ProductMenu() {
   };
   return (
     <div>
-      <Menu onClick={handleClick} style={{width: 400, padding: '20px'}} mode="vertical" >
+      <Menu onClick={handleClick} style={{padding: '20px'}} mode="vertical" >
         <Menu.Item label="price"><Slider label="Price" marks={marks} defaultValue={37} />
 
         </Menu.Item>

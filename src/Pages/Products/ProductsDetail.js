@@ -11,13 +11,10 @@ import ProductCard from '../../component/Product/ProductCard';
 import {bycategory} from './ProductUtil';
 import {Link} from 'react-router-dom';
 
-// const {id} =useParams();
 function ProductsDetail(props) {
   const [filteredctg, addcategory] = useState();
   const {id} = useParams();
   const {category}=props;
-  // console.log(':::::::');
-  // console.log(id);
 
   useEffect(() => {
     addcategory(category);
@@ -26,34 +23,31 @@ function ProductsDetail(props) {
     if (filteredctg) {
       const byctg =bycategory(category, id);
       addcategory(byctg);
-      // console.log(byctg);
     }
   }, [id]);
 
-  console.log(filteredctg);
-
-
-  // addcategory(category);
 
   if (filteredctg) {
-    // console.log(category);
-
     return (
       <div>
-        <Row>
+        <Row gutter={[12, 24]}>
           <Col span={6} lg={6} md={8} sm={12} xs={24}
           >
             <ProductMenu />
           </Col>
           <Col span={18} lg={18} md={16} sm={12} xs={24}
 
+
           >
-            <Row justify="space-around">
+            <Row gutter={[12, 24]} justify="space-around" style={{marginLeft: '30px'}}>
+
               {filteredctg.map((item, index)=>{
-                return (<Col key={index} span={4} lg={4} md={8} sm={12} xs={24}
-                ><Link to={`/productdetails/${item.id}`}>
+                return (<Col style={{margin: '0px 20px'}} key={index} span={6} lg={6} md={8} sm={12} xs={24}
+                >
+                  <Link to={`/productdetails/${item.id}`}>
                     <ProductCard image={item.url} name={item.Name} price={item.price}
-                      discount={item.discount} offer={item.offer}/></Link>
+                      discount={item.discount} offer={item.offer}/>
+                  </Link>
                 </Col>);
               })}
 

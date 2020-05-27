@@ -19,6 +19,8 @@ import Footers from './Pages/Footer/Footers';
 import Products from './Pages/Products/Products';
 import Error from './Pages/Error';
 import Details from './Pages/Detail/Details';
+import Account from './Pages/account/Account';
+import Cart from './Pages/Cart/Cart';
 // import Product from './component/Product/Product';
 const {Content} = Layout;
 
@@ -41,8 +43,11 @@ function App() {
             <Route exact path='/Login' component={Login} />
             <Route path='/productdetails/:id' component={Details} />
             <Route exact path='/signup' component={Signup} />
+            <Route exact path='/account' component={Account} />
+            <Route exact path='/cart' component={Cart} />
             {/* <Route exact path='/sample' component={Sample} /> */}
             <Route path='/products' component={Products} />
+
             <Route path="*"><Error /></Route>
             <Details />
 

@@ -23,20 +23,15 @@
     float: left;
   }
   .search {
-    padding-top: 15px;
+    padding-top: 0px;
+    color:green
     
   }
-//  * {
-//     font-family: 'Alfa Slab One';font-size: 22px!important;
-//   }
 
-// *{
-//   font-family: 'Acme';font-size: 22px;
+// .search{
+//   color: green;
+//   // background: green;
 // }
-.search{
-  color: green;
-  // background: green;
-}
 
 @media screen and (max-width: 768px) {
   .search{

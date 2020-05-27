@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card} from 'antd';
-import {Typography} from 'antd';
-import {Button} from 'antd';
+import {Card, Typography, Button} from 'antd';
+import {Link} from 'react-router-dom';
 const {Text} = Typography;
 
 const {Meta} = Card;
@@ -25,7 +24,11 @@ export default function ProductCard(props) {
         <p><Text type="danger" delete>Rs: {oldprice}</Text> <Text style={{color: 'blue'}} strong type="secondary">Rs: {price}</Text>
         </p>
         <div>
-          <Button className="cartbutton" type="primary" shape="round"> Add To cart</Button>
+          <Button className="cartbutton" type="primary" shape="round">
+            <Link to="/cart">
+          Add To cart
+            </Link>
+          </Button>
         </div>
       </Card>
     </div>

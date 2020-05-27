@@ -7,7 +7,7 @@ export default function Picture(props) {
 
   return (
     <div className="detailimage">
-      <img className="" src={image} alt="my new" height='180px' width='240px' />
+      <img className="" src={image} alt="my new" height='240px' width='240px' />
     </div>
   );
 }

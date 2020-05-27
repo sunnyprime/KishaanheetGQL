@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Form, Input, Button, Checkbox} from 'antd';
 import './Login.scss';
-import {signIn} from '../../redux/auth/auth.action';
+import {signUp} from '../../redux/auth/auth.action';
 import {Row, Col} from 'antd';
 
 const layout = {
@@ -21,7 +21,7 @@ function Signup(props) {
 
   const onFinish = (values) => {
     console.log('Success:', values);
-    props.signIn(values);
+    props.signUp(values);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -44,6 +44,12 @@ function Signup(props) {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
           >
+            <Form.Item name='firstName' label="First Name" rules={[{required: true}]}>
+              <Input />
+            </Form.Item>
+            <Form.Item name='lastName' label="Last Name" rules={[{required: true}]}>
+              <Input />
+            </Form.Item>
             <Form.Item
               label="Email"
               name="email"
@@ -98,7 +104,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signIn: (creds) => dispatch(signIn(creds)),
+    signUp: (creds) => dispatch(signUp(creds)),
   };
 };
 

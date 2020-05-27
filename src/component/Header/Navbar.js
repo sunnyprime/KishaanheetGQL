@@ -31,15 +31,19 @@ function Navbar(props) {
 
         {auth.isEmpty ? <React.Fragment>
           <Menu theme="dark" mode="horizontal">
-            <Menu.Item><NavLink to="/products">Product</NavLink></Menu.Item>
+            <Menu.Item><NavLink to="/products/all">Product</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/productupload">Upload</NavLink></Menu.Item>
+            <Menu.Item><NavLink to="/account">Account</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/login">Login</NavLink></Menu.Item>
             <Menu.Item><NavLink to="/signup">Signup</NavLink></Menu.Item>
           </Menu></React.Fragment>: (
          <Menu theme="dark" mode="horizontal">
+           <Menu.Item><NavLink to="/products/all">Product</NavLink></Menu.Item>
+           <Menu.Item><NavLink to="/productupload">Upload</NavLink></Menu.Item>
+           <Menu.Item><NavLink to="/account">Account</NavLink></Menu.Item>
            <Menu.Item><NavLink to="/" onClick={props.signOut}>Logout
            </NavLink></Menu.Item>
-           <Menu.Item><NavLink to="/" onClick={props.signOut}>
+           <Menu.Item><NavLink to="/cart">
              <ShoppingCartOutlined /></NavLink></Menu.Item>
          </Menu>
 
