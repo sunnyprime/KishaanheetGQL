@@ -18,13 +18,13 @@ function ProductsDetail(props) {
 
   useEffect(() => {
     addcategory(category);
-  }, [category, id, []]);
+  }, [id]);
   useEffect(()=>{
     if (filteredctg) {
       const byctg =bycategory(category, id);
       addcategory(byctg);
     }
-  }, [id, category, []]);
+  }, [id]);
 
 
   if (filteredctg) {

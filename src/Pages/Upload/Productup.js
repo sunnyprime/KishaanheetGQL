@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {InputNumber, Form, Input, Button, Select, Switch} from 'antd';
+import {InputNumber, Checkbox, Form, Input, Button, Select, Switch} from 'antd';
 import {Spin} from 'antd';
 // import { Form, Input, InputNumber, Button } from 'antd';
 import {connect} from 'react-redux';
@@ -39,6 +39,8 @@ class Productup extends Component {
 
   render() {
     const {category} =this.props;
+    // const {getFieldDecorator} = this.props.form;
+
     // console.log(category);
     if (category) {
       return (
@@ -101,9 +103,14 @@ class Productup extends Component {
             >
               <InputNumber />
             </Form.Item>
-            <Form.Item name="offer" label="Offer" valuePropName="checked">
+            <Form.Item name="offer" label="Offer" valuePropName="checked"
+            // {getFieldDecorator('offer', {initialValue:false})}
+            >
               <Switch />
             </Form.Item>
+            {/* <Form.Item name="remember" valuePropName="checked">
+              <Checkbox>Remember me</Checkbox>
+            </Form.Item> */}
 
             <Form.Item
               name="brand"

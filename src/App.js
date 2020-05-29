@@ -21,6 +21,7 @@ import Error from './Pages/Error';
 import Details from './Pages/Detail/Details';
 import Account from './Pages/account/Account';
 import Cart from './Pages/Cart/Cart';
+import DevTools from './DevTools';
 // import Product from './component/Product/Product';
 const {Content} = Layout;
 
@@ -54,6 +55,7 @@ function App() {
           </Switch>
         </Content>
         <Footers />
+        {/* <DevTools /> */}
       </Layout>
     </div>
 

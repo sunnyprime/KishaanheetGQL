@@ -9,7 +9,7 @@ export default function ProductCard(props) {
 //   console.log(props);
   const {name, image, price, offer, discount} = props;
   const oldprice = (price*100/(100-discount)).toFixed(0);
-  console.log(offer);
+  // console.log(offer);
 
 
   return (
