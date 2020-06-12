@@ -6,12 +6,12 @@ export const signIn = (credentials) => {
     firebase.auth().signInWithEmailAndPassword(
         credentials.email,
         credentials.password,
-    ).then(()=>{
-      dispatch({type: 'LOGIN_SUCCESS'});
-      dispatch(setAlert('Login Successful', 'success'));
+    ).then((response)=>{
+      dispatch({type: 'LOGIN_SUCCESS', payload: firebase.firebase().auth.uid});
+      // dispatch(setAlert('Login Successful', 'success'));
     }).catch((err) => {
       dispatch({type: 'LOGIN_ERROR', err});
-      dispatch(setAlert(err, 'danger'));
+      // dispatch(setAlert(err, 'danger'));
     });
   };
 };
@@ -30,8 +30,6 @@ export const signOut = () => {
 ;
 
 export const signUp = (newUser) => {
-  console.log(newUser);
-
   return (dispatch, getState, {getFirebase, getFirestore}) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
@@ -55,3 +53,23 @@ export const signUp = (newUser) => {
   };
 }
 ;
+
+export const Phoneverifier = (newUser) => {
+  console.log(newUser);
+
+  return (dispatch, getState, {getFirebase, getFirestore, getPhoneNumberFromUserInput}) => {
+    const phoneNumber = getPhoneNumberFromUserInput();
+    const appVerifier = window.recaptchaVerifier;
+    const firebase = getFirebase();
+
+    firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then(function(confirmationResult) {
+          // SMS sent. Prompt user to type the code from the message, then sign the
+          // user in with confirmationResult.confirm(code).
+          window.confirmationResult = confirmationResult;
+        }).catch(function(error) {
+          // Error; SMS not sent
+          // ...
+        });
+  };
+};

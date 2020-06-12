@@ -3,8 +3,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Form, Input, Button, Checkbox} from 'antd';
-import './Login.scss';
-import {signUp} from '../../redux/auth/auth.action';
+// import './Login.scss';
+import {signIn} from '../../redux/auth/auth.action';
 import {Row, Col} from 'antd';
 
 const layout = {
@@ -16,12 +16,12 @@ const layout = {
   },
 };
 
-function Signup(props) {
-  // console.log(props);
+function Mobileauth(props) {
+  console.log(props);
 
   const onFinish = (values) => {
-    // console.log('Success:', values);
-    props.signUp(values);
+    console.log('Success:', values);
+    props.signIn(values);
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -32,9 +32,9 @@ function Signup(props) {
     <div>
       <Row>
         <Col span={3} lg={5} xs={0}></Col>
-        <Col span={12} lg={12} xs={24}className="authbox"> <h3>SIGNUP</h3>
+        <Col span={12} lg={12} xs={24}className="authbox"> <h3>LOGIN</h3>
           <hr />
-          <br />
+          <br/>
           <Form
             {...layout}
             name="basic"
@@ -44,37 +44,31 @@ function Signup(props) {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
           >
-            <Form.Item name='firstName' label="First Name" rules={[{required: true}]}>
-              <Input />
-            </Form.Item>
-            <Form.Item name='lastName' label="Last Name" rules={[{required: true}]}>
-              <Input />
-            </Form.Item>
             <Form.Item
-              label="Email"
-              name="email"
+              label="Mobile"
+              name="mobile"
               rules={[
                 {
-                  type: 'email',
+                  type: 'number',
                   required: true,
-                  message: 'Please input your email!',
+                  message: 'Please input your Mobile Number',
                 },
               ]}
             >
-              <Input />
+              <Input placeholder="Enter your Email" />
             </Form.Item>
 
             <Form.Item
-              label="Password"
-              name="password"
+              label="OTP"
+              name="OTP"
               rules={[
                 {
-                  required: true,
-                  message: 'Please input your password!',
+
+                  message: 'Please input your OTP',
                 },
               ]}
             >
-              <Input.Password />
+              <Input.Password placeholder="Enter your Password" />
             </Form.Item>
             <div className="tailLayout">
               <Form.Item name="remember" valuePropName="checked">
@@ -83,15 +77,14 @@ function Signup(props) {
 
               <Form.Item>
                 <Button className="authbutton" type="primary" htmlType="submit">
-          Signup
+          Login
                 </Button>
               </Form.Item>
             </div>
-
-          </Form>
-        </Col>
+          </Form></Col>
         <Col span={2}></Col>
       </Row>
+
     </div>
   );
 }
@@ -104,9 +97,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    signUp: (creds) => dispatch(signUp(creds)),
+    signIn: (creds) => dispatch(signIn(creds)),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Signup)
+export default connect(mapStateToProps, mapDispatchToProps)(Mobileauth)
 ;

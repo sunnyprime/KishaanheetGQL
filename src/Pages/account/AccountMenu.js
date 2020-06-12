@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Menu} from 'antd';
 import man from '../../Images/man.png';
-import AccountContent from './AccountContent';
-import {Row, Col, Divider} from 'antd';
+// import AccountContent from './AccountContent';
+import {Row, Col} from 'antd';
 import {FolderAddTwoTone} from '@ant-design/icons';
 
-const style = {background: '#0092ff', padding: '8px 0'};
+// const style = {background: '#0092ff', padding: '8px 0'};
 
 
 class AccountMenu extends Component {

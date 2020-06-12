@@ -6,7 +6,7 @@ import Picture from '../../component/Detail/Picture';
 import Detail from '../../component/Detail/Detail';
 import {Row, Col} from 'antd';
 import Deals from '../../component/Deals/Deals';
-import {useParams} from 'react-router-dom';
+// import {useParams} from 'react-router-dom';
 // 4H1EdS37kYf4pG7RWvPf
 function Details({category}) {
   if (category) {
@@ -37,6 +37,8 @@ function Details({category}) {
 }
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(ownProps);
+
   const ids = ownProps.match.params.id;
   const datas = state.firestore.ordered.product;
   let data = null;

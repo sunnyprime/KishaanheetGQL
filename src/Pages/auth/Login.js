@@ -23,10 +23,10 @@ const layout = {
 // };
 
 function Login(props) {
-  console.log(props);
+  // console.log(props);
 
   const onFinish = (values) => {
-    console.log('Success:', values);
+    // console.log('Success:', values);
     props.signIn(values);
   };
 

@@ -1,10 +1,10 @@
 import React from 'react';
-import {Row, Col, Divider} from 'antd';
+import {Row, Col} from 'antd';
 import './Account.scss';
 import AccountMenu from './AccountMenu';
 import AccountContent from './AccountContent';
 
-const style = {background: '#0092ff', padding: '8px 0'};
+// const style = {background: '#0092ff', padding: '8px 0'};
 
 export default function Account() {
   return (

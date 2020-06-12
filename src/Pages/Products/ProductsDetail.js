@@ -10,6 +10,8 @@ import ProductMenu from './ProductMenu';
 import ProductCard from '../../component/Product/ProductCard';
 import {bycategory} from './ProductUtil';
 import {Link} from 'react-router-dom';
+import {addTocart} from '../../redux/cart/cart.action';
+
 
 function ProductsDetail(props) {
   const [filteredctg, addcategory] = useState();
@@ -25,6 +27,13 @@ function ProductsDetail(props) {
       addcategory(byctg);
     }
   }, [id]);
+
+  const addtocart = (data) =>{
+    console.log('add To cartt');
+
+    // console.log(data);
+    props.addTocart(data);
+  };
 
 
   if (filteredctg) {
@@ -46,7 +55,7 @@ function ProductsDetail(props) {
                 >
                   <Link to={`/productdetails/${item.id}`}>
                     <ProductCard image={item.url} name={item.Name} price={item.price}
-                      discount={item.discount} offer={item.offer}/>
+                      discount={item.discount} offer={item.offer} add={addtocart} />
                   </Link>
                 </Col>);
               })}
@@ -61,13 +70,18 @@ function ProductsDetail(props) {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addTocart: (creds) => dispatch(addTocart(creds)),
+  };
+};
 const mapStateToProps = (state) => {
   return {
     category: state.firestore.ordered.product,
   };
 };
 export default compose(
-    connect(mapStateToProps),
+    connect( mapStateToProps, mapDispatchToProps),
     firestoreConnect([{
       collection: 'product',
     }]),

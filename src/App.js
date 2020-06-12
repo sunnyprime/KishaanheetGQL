@@ -21,7 +21,8 @@ import Error from './Pages/Error';
 import Details from './Pages/Detail/Details';
 import Account from './Pages/account/Account';
 import Cart from './Pages/Cart/Cart';
-import DevTools from './DevTools';
+// import DevTools from './DevTools';
+import Mobileauth from './Pages/Mobile/Mobileauth';
 // import Product from './component/Product/Product';
 const {Content} = Layout;
 
@@ -31,6 +32,7 @@ function App() {
 
     <div className="whole">
       <Layout>
+        {/* <DevTools /> */}
         <Navbar></Navbar>
 
 
@@ -48,6 +50,8 @@ function App() {
             <Route exact path='/cart' component={Cart} />
             {/* <Route exact path='/sample' component={Sample} /> */}
             <Route path='/products' component={Products} />
+            <Route path='/mobile' component={Mobileauth} />
+
 
             <Route path="*"><Error /></Route>
             <Details />
@@ -55,7 +59,7 @@ function App() {
           </Switch>
         </Content>
         <Footers />
-        {/* <DevTools /> */}
+
       </Layout>
     </div>
 

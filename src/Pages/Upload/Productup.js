@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {InputNumber, Checkbox, Form, Input, Button, Select, Switch} from 'antd';
+import {InputNumber, Form, Input, Button, Select, Switch} from 'antd';
 import {Spin} from 'antd';
 // import { Form, Input, InputNumber, Button } from 'antd';
 import {connect} from 'react-redux';

@@ -8,7 +8,7 @@ import {Button} from 'antd';
 const {Text} = Typography;
 const s =50;
 function onChange(value) {
-  console.log('changed', value);
+  // console.log('changed', value);
 }
 export default function Detail({name, category, price, discount}) {
   const oldprice = (price*100/(100-discount)).toFixed(0);
