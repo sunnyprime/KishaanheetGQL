@@ -1,9 +1,8 @@
 // import firebase from 'firebase/app';
 // import * as firebase from 'firebase';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import 'firebase/auth'
 
 // Replace this with your own config details
 // var firebaseConfig = {
@@ -17,18 +16,17 @@ import 'firebase/auth';
 //   measurementId: "G-1H8FHDRG6T"
 // };
 
-
 const firebaseConfig = {
-  apiKey: 'AIzaSyCJawhNmsNuNUEvd_9r0QSqoxbqL664fXQ',
-  authDomain: 'kishaanheet.firebaseapp.com',
-  databaseURL: 'https://kishaanheet.firebaseio.com',
-  projectId: 'kishaanheet',
-  storageBucket: 'kishaanheet.appspot.com',
-  messagingSenderId: '527862447188',
-  appId: '1:527862447188:web:19aa57728ecad9f22101c1',
-  measurementId: 'G-VCEKB43MJ5',
-};
-firebase.initializeApp(firebaseConfig);
-firebase.firestore().settings({timestampsInSnapshots: true});
+	apiKey: 'AIzaSyCJawhNmsNuNUEvd_9r0QSqoxbqL664fXQ',
+	authDomain: 'kishaanheet.firebaseapp.com',
+	databaseURL: 'https://kishaanheet.firebaseio.com',
+	projectId: 'kishaanheet',
+	storageBucket: 'kishaanheet.appspot.com',
+	messagingSenderId: '527862447188',
+	appId: '1:527862447188:web:19aa57728ecad9f22101c1',
+	measurementId: 'G-VCEKB43MJ5',
+}
+firebase.initializeApp(firebaseConfig)
+firebase.firestore().settings({ timestampsInSnapshots: true })
 
-export default firebase;
+export default firebase

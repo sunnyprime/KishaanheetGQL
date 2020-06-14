@@ -8,9 +8,16 @@ import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 
 import {store, persistor} from './redux/store';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost'
+
+const client = new ApolloClient({
+    uri: 'http://localhost:8000/graphql/'
+})
+
 
 ReactDOM.render(
-
+  <ApolloProvider client={client}>
     <Provider store={store}>
       <BrowserRouter>
         <PersistGate persistor={persistor}>
@@ -19,6 +26,7 @@ ReactDOM.render(
 
       </BrowserRouter>
     </Provider>
+  </ApolloProvider>
     ,
     document.getElementById('root'),
 );

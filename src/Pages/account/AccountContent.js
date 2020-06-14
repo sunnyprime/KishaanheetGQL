@@ -1,9 +1,5 @@
-import React from 'react';
+import React from 'react'
 
 export default function AccountContent() {
-  return (
-    <div>
-            Content
-    </div>
-  );
+	return <div>Content</div>
 }
